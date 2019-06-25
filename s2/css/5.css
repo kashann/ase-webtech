@@ -1,0 +1,25 @@
+[type]{
+    background-color:orange;
+}
+
+[type=text]{
+    background-color:lightblue;
+}
+
+[value*='@']{
+    background-color:tomato;
+}
+
+[class^=abc]{
+    background-color:gold;
+}
+
+[class$=xyz]{
+    background-color:lightblue;
+}
+
+
+/*echivalent cu .abc*/
+[class~=abc]{
+    background-color:tomato;
+}

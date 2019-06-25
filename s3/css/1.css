@@ -1,0 +1,9 @@
+*{
+  border:1px solid black;
+  box-sizing:border-box;
+}
+
+#container{
+  width:400px;
+  height:400px;
+}

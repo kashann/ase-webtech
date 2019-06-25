@@ -1,0 +1,7 @@
+div span{
+    background-color:orange;
+}
+
+div>span{
+    background-color:tomato;
+}

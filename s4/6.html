@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+      console.log('hello')
+      document.write('hello again')
+      let o = {
+        name : 'andrei',
+        age : 36,
+        ageMe : function(){
+          this.age++
+        }
+      }
+      console.log(o.name)
+      console.log(o['a'+'g'+'e'])
+      o.ageMe()
+      console.log(o.age)
+      for (let prop in o){
+        console.log('value of ' + prop + ' is ' + o[prop])
+      }
+      
+      
+    </script>
+  </head>
+</html>

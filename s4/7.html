@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+      window.onload = () => {
+        let d = document.querySelector('#display')
+        d.innerHTML = 'initial'
+        let b = document.querySelector('#addButton')
+        b.onclick = () => {
+          let t = document.getElementById('someText')
+          let v = t.value
+          
+          d.innerHTML += v
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="someText"/>
+      <input type="button" value="Click me!!!" id="addButton" />
+    </form>
+    <div id="display"></div>
+  </body>
+</html>

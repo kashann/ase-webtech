@@ -1,0 +1,12 @@
+p.special::first-line{
+    font-size:2em;
+}
+
+p.special::first-letter{
+    font-size:4em;
+}
+
+p.special::selection{
+    background-color:black;
+    color:white;
+}
