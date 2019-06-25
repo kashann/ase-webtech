@@ -1,0 +1,48 @@
+CONTENT
+
+-Introduction
+-Technologies used
+-Implementation
+
+
+INTRODUCTION
+
+Topic no. 5: Candidate profile manager integrated with LinkedIn (or job application manager)
+I will develop a web application that helps people to find a job more easily, and the employers to find the employees they are looking for.
+Each person that wants to find/apply for a job, will have to register (create a new account) in order to have access to the job offers.
+Each company that wants to hire employees will also have to create a different kind of account, special for employers.
+The target demographics of the application is people aged 18+ preferaby with a bachelors degree, 
+but also middle aged persons who might want to change their jobs.
+
+
+TECHNOLOGIES USED
+
+I am going to choose the ReST architectural style. The profiles of the employers and future employees will be enhanced using LinedIn API.
+And for the front-end, I'm going to use React.js.
+
+
+IMPLEMENTATION
+
+The first page that I will implement is a login page/form with the username and password fields, log in button, but also a register button. 
+Depending on the type of account, the users will be able to look for jobs or for employees. Other than that, it will be exactly the same.
+After validating the login, the user will be redirected to a home page that will have:
+-my profile button that redirects to the profile page of the person/company
+-a dropdown menu with: Available jobs/employees, Jobs applied for/My jobs offered, Jobs/Employees matched
+-search bar (and maybe some filters or another dropdown menu with some jobs categories)
+-notifications button
+-logout button
+
+There will be an "Apply for job" button on each job offer page, and it would be 
+nice to have a timer that shows a deadline. 
+Also, I could aslo implement an attachment button for a CV, if the person want to submit a custom CV for that 
+specific employer. If left blank, a general CV that is uploaded on the persons' profile will be shown to the company.
+
+On the other hand, for the employers, there will be a "Request applcation" button on each persons' profile.
+The persons will be able to see that they are needed in a certain job and they can easily click on the notification
+and they will be able to see the job profile and the employer.
+
+I have to design the interface in a such manner that it will be user-friendly for both employers 
+and future employees, and I will use LinkedIn API for giving another dimension of the profiles of both parties.
+
+It would be nice to have a messaging system between the employers and future 
+employees and maybe to show some suggestions on which other jobs to apply for.
