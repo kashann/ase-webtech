@@ -1,0 +1,98 @@
+﻿.loader { /*setting the position*/
+    left: 30%;
+    top: 45%;
+    position: fixed;
+}
+
+.loader #spinner { /*characteristics of the spinner*/
+    border: 16px solid #d7d7d7;
+    border-top: 16px solid #eb5c19;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+body {
+    background-image: url("img/canvas.jpg"); /*importing the image background*/
+    background-position: right top;
+    /*background-color: #a5a5a5;*/ /*old background*/
+    background-attachment: fixed;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-family: 'Yanone Kaffeesatz'; /*the imported font*/
+    font-size: 55px;
+    margin: 20px;
+}
+
+p {
+    font-size: 22px; /*the size of the fonts in all paragraphs*/
+}
+
+.tools {
+    float: right; /*the position of the editing tools*/
+    width: 28%;
+    text-align: left;
+}
+
+.canvas {
+    width: 60%;
+    padding-right: 10px;
+    height: auto;
+}
+
+button { /*buttons characteristics*/
+    color: white;
+    background: #eb5c19;
+    font-family: sans-serif;
+    border-radius: 20%;
+    border: 3px solid black;
+    padding: 5px;
+    margin-top: 2px;
+    opacity: 0.9; /*lowering opacity for mouse-over effects*/
+}
+
+button:hover {
+    opacity: 1; /*full opacity on mouse-over*/
+}
+
+input[type="file"] { /*characteristics for the file picker*/
+    color: white;
+    background: #eb5c19;
+    font-family: sans-serif;
+    border-radius: 10%;
+    border: 3px solid black;
+    padding: 5px;
+    margin-top: 2px;
+    opacity: 0.9; /*lowering opacity for mouse-over effects*/
+}
+
+input[type="file"]:hover {
+    opacity: 1; /*full opacity on mouse-over*/
+}
+
+input[type="number"] { /*characteristics of the number text fields for cropping*/
+    background: #d7d7d7;
+    font-family: sans-serif;
+    border-radius: 10%;
+    border: 3px solid black;
+    padding: 5px;
+    margin-top: 2px;
+    width: 50px;
+}
+
+.slider { /*making the sliders cool*/
+    opacity: 0.7; /*lowering opacity for mouse-over effects*/
+}
+
+.slider:hover {
+    opacity: 1; /*full opacity on mouse-over*/
+}

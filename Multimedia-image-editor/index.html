@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Photo mini-Editor</title> <!--tab name-->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="script.js"></script> <!--linking my javascript file-->
+    <!--<script type="text/javascript" src="lib/canvas-processing-3.js"></script> // no need for importing as I've only "inspired" from your file -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!--linking my css file-->
+    <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet"> <!--importing a font-->
+    <link rel="icon" type="image/png" href="img/k.ico" /> <!--tab icon-->
+</head>
+
+<body>
+    <audio id="audio" src="http://www.soundjay.com/button/beep-07.wav" autostart="false"></audio> <!--importing a small audio-->
+    <h1>Kashan's Photo Editor</h1> <!--head title-->
+    <div class="tools"> <!--class used for easier CSS styling-->
+        <label for="fileBrowser">Please upload a file by clicking below or by d&d</label>
+        <input type="file" id="fileBrowser" name="fileBrowser" value="Choose image" accept="image/*"> <!--the filepicker-->
+        <button type="button" id="reset" class="effectType" data-effect="reset" onclick="clickSound()">Reset</button> <!--clickSound() plays the audio from above-->
+        Recommended resolution: 1248x800 <!--(the resolution of the picture (test_pic.jpg) I used for arranging all the shapes)-->
+        <p>
+            <label for="resolution">Size: </label>
+            <input id="resolution" name="resolution" type="range" min=0 max=200 value=100 /> <!--slider-->
+        </p>
+        <p><!--Filters-->
+            <button type="button" class="effectType" data-effect="grayscale" onclick="clickSound()">Grayscale</button> <!--buttons-->
+            <button type="button" class="effectType" data-effect="brightness" onclick="clickSound()">Brighten</button>
+            <button type="button" class="effectType" data-effect="darkness" onclick="clickSound()">Darken</button>
+            <button type="button" class="effectType" data-effect="threshold" onclick="clickSound()">Threshold</button>
+            <button type="button" class="effectType" data-effect="sepia" onclick="clickSound()">Sepia</button>
+            <button type="button" class="effectType" data-effect="negative" onclick="clickSound()">Negative</button>
+        </p>
+        <p>
+            <button type="button" id="btnCrop" onclick="clickSound()">Crop</button>
+            <label> function:  </label>
+            <label>X,Y Coord:</label>
+            <input type="number" id="startX" /> x <!--numeric inputs, like textboxes but only for numbers-->
+            <input type="number" id="startY" />
+        </p>
+        <p>
+            <label>New width:</label>
+            <input type="number" id="newW" />
+            <label> & height:</label>
+            <input type="number" id="newH" />
+        </p>
+        <p>
+            <label>Draw: </label>
+            <button type="button" id="rectangle" onclick="clickSound()">Rectangle</button>
+            <button type="button" id="triangle1" onclick="clickSound()">Triangles</button>
+            <button type="button" id="triangle2" onclick="clickSound()">More tr.</button>
+            <button type="button" id="lines" onclick="clickSound()">Lines</button>
+            <button type="button" id="text" onclick="clickSound()">Text</button>
+            <button type="button" id="nota" onclick="clickSound()">10</button>
+        </p>
+        <p>
+            <label for="opacity">Drawing opacity: </label>
+            <input id="opacity" name="opacity" type="range" min=0 max=100 value=100 /> <!--another slider-->
+        </p>
+    </div>
+    <a id="downloadLink" href="#" download="processedImage.png">
+        <img id="processedImage" class="canvas"></canvas>
+    </a>
+    <div class="loader">
+        <div id="spinner"></div> <!--the loading spinner-->
+    </div>
+    <script>
+            function clickSound() { // the function for playing the beep
+                var beep = document.getElementById("audio");
+                beep.play()
+            }
+    </script>
+</body>
+
+</html>

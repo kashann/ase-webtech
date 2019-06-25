@@ -1,0 +1,51 @@
+body {
+  background: #353535;
+  color: #c4c4c4;
+  font-size: 1.1rem;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin: 15px;
+}
+
+#left {
+  float: left;
+  margin-left: 20px;
+  width: 220px;
+  padding: 15px;
+  border: 1px dashed;
+  color: #0C0701;
+  text-align: center;
+  font: bold;
+  box-shadow: 0px 0px 0px 5px gray, 0px 0px 2px 5px yellow inset;
+  background-color: #F3C2EB;
+}
+
+#right {
+  width: 900px;
+}
+
+#mainCanvas {
+  margin-left: 250px;
+  margin-bottom: 20px;
+  position: absolute;
+  background-color: #EAE6F2;
+  box-shadow: 0 5px 11px #000000;
+}
+
+.pic {
+  margin: auto;
+  display: none;
+  width: 100px;
+  height: 75px;
+}
+
+.btn {
+  opacity: 0.85; /* mouse hover effect */
+}
+
+.btn:hover {
+  opacity: 1; /* mouse hover effect */
+}
